@@ -11,7 +11,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -53,7 +55,7 @@ public class Expense {
     private BigDecimal budget;
     
     @Column(columnDefinition = "date")
-    private BigDecimal paymentDeadline;
+    private LocalDate paymentDeadline;
     
     @Column(nullable = false, columnDefinition = "boolean default false")
     private boolean payed;
@@ -71,4 +73,19 @@ public class Expense {
             referencedColumnName = "id"
     )
     User user;
+    
+    @OneToOne
+    @JoinColumn(
+            name = "transaction_id",
+            referencedColumnName = "id"
+    )
+    Transaction transaction;
+    
+    @OneToOne
+    @JoinColumn(
+            name = "notification_id",
+            referencedColumnName = "id"
+    )
+    Notification notfication;
 }
+// 4 types of joins: inner, (left, right, full) outer join
