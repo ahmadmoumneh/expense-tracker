@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Category {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
     @Column(nullable = false, columnDefinition = "decimal(10,2)")
@@ -39,5 +39,5 @@ public class Category {
     private boolean featured;
     
     @Column(columnDefinition = "longblob")
-    private String imageName;
+    private byte[] image;
 }

@@ -6,11 +6,13 @@ package am.software.expensetracker.dao;
 
 import am.software.expensetracker.dto.Notification;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author sara
  */
+@Repository
 public interface NotificationRepository extends JpaRepository<Notification, Integer> {
     
 }

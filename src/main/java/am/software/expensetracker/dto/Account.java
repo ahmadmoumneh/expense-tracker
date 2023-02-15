@@ -26,7 +26,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-
 public class Account {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -43,8 +42,6 @@ public class Account {
     
     @Column(nullable = false, columnDefinition = "decimal(10,2)")
     private BigDecimal balance;
-    
-    Category category;
     
     @ManyToOne
     @JoinColumn(

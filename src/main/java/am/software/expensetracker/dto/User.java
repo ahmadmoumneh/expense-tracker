@@ -44,5 +44,5 @@ public class User {
     private String LastName;
     
     @Column(columnDefinition = "longblob")
-    private String avatar;
+    private byte[] avatar;
 }

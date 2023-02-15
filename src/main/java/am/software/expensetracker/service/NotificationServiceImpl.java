@@ -8,11 +8,13 @@ import am.software.expensetracker.dao.NotificationRepository;
 import am.software.expensetracker.dto.Notification;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author sara
  */
+@Component
 public class NotificationServiceImpl implements NotificationService {
     @Autowired 
     NotificationRepository notificationDao;

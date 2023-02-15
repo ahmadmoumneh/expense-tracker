@@ -33,7 +33,7 @@ public class Transaction {
     private Integer id;
     
     @Column(nullable = false, columnDefinition = "decimal(10,2)")
-    private BigDecimal amount ;
+    private BigDecimal amount;
     
     @Column(nullable = false, columnDefinition = "date")
     private LocalDate date ;

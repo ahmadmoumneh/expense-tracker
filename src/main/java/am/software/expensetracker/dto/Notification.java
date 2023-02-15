@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.sql.Date;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,15 +20,12 @@ import lombok.NoArgsConstructor;
  *
  * @author sara
  */
-
-
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class Notification {
-    
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
@@ -39,14 +37,8 @@ public class Notification {
     private String description;
     
     @Column(columnDefinition = "date")
-    private LocalDate reminder;
+    private Date reminder;
     
-    @Column(nullable = false,columnDefinition="boolean")
-    private boolean read;
-    
-    
-    
-    
-    
-    
+    @Column(nullable = false, columnDefinition = "boolean default false")
+    private boolean isRead;
 }

@@ -39,7 +39,7 @@ public class NotificationController {
         return this.notificationService.getAllNotifications();
     }
     
-    @PostMapping("/addNotification")
+    @PostMapping("/addnotification")
     @ResponseStatus(HttpStatus.CREATED)
     public Notification addNotification(@RequestBody Notification notification) {
         return this.notificationService.saveNotification(notification);

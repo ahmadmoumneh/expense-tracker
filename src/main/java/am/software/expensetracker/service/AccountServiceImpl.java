@@ -8,12 +8,14 @@ import am.software.expensetracker.dao.AccountRepository;
 import am.software.expensetracker.dto.Account;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 
 /**
  *
  * @author mrmik
  */
+@Component
 public class AccountServiceImpl implements AccountService {
      @Autowired AccountRepository accountDao;
     

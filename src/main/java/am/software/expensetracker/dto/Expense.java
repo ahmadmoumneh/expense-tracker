@@ -86,6 +86,5 @@ public class Expense {
             name = "notification_id",
             referencedColumnName = "id"
     )
-    Notification notfication;
+    Notification notification;
 }
-// 4 types of joins: inner, (left, right, full) outer join
