@@ -38,8 +38,7 @@ public class Transaction {
     @Column(nullable = false, columnDefinition = "date")
     private LocalDate date ;
     
-   // @ManyToOne
-   // @JoinColumn(name = "account_id", referencedColumnName = "id")
-   // private Account account;
-    
+    @ManyToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
+    private Account account;
 }

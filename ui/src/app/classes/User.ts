@@ -1,0 +1,9 @@
+export class User {
+    id: number;
+    name: string;
+    email: string;
+    password: string;
+    firstName: string;
+    lastName: string;
+    avatar: string;
+}
