@@ -3,9 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './modules/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { HomeModule } from './modules/home.module';
+import { AccountsModule } from './modules/accounts/accounts.module';
+import { CategoriesModule } from './modules/categories/categories.module';
+import { HistoryModule } from './modules/history/history.module';
+import { HomeModule } from './modules/home/home.module';
+import { ReportsModule } from './modules/reports/reports.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +17,14 @@ import { HomeModule } from './modules/home.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HomeModule
+    NavigationComponent,
+    HomeModule,
+    AccountsModule,
+    HistoryModule,
+    CategoriesModule,
+    ReportsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

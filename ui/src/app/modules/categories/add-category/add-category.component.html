@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Add Category</h1>
+    <label for="title">Title</label><br>
+    <input id="title" type="text" [(ngModel)]="currentCategory.name" /><br><br>
+
+    <label for="budget">Budget</label><br>
+    <input type="number" id="budget" [(ngModel)]="currentCategory.budget" /><br><br>
+
+    <label for="featured">Featured</label>&nbsp;
+    <input type="checkbox" id="featured" [(ngModel)]="currentCategory.featured" />
+
+    <button (click)="addCategory()">Add</button>
+</div>

@@ -3,5 +3,5 @@ export class Category {
     budget: number;
     name: string;
     featured: boolean;
-    imageName: string;
+    image: Blob;
 }

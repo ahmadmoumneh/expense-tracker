@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,17 +32,11 @@ public class Account {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
     
-    @Column(nullable = false, columnDefinition = "varchar(10)")
+    @Column(nullable = false, columnDefinition = "varchar(30)")
     private String title;
     
     @Column(nullable = false, columnDefinition = "varchar(15)")
     private String accountType;
-    
-    @Column(nullable = false, columnDefinition = "varchar(10)")
-    private String currency;
-    
-    @Column(nullable = false, columnDefinition = "decimal(10,2)")
-    private BigDecimal balance;
     
     @ManyToOne
     @JoinColumn(

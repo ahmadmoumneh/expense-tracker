@@ -38,7 +38,7 @@ public class CategoryController {
         return this.categoryService.getAllCategories();
     }
     
-    @PostMapping("/addCategory")
+    @PostMapping("/addcategory")
     @ResponseStatus(HttpStatus.CREATED)
     public Category addCategory(@RequestBody Category category) {
         return this.categoryService.saveCategory(category);

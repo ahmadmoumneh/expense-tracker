@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
@@ -32,11 +33,17 @@ public class Transaction {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
     
+    @Column(nullable = false, columnDefinition = "varchar(30)")
+    private String title;
+    
     @Column(nullable = false, columnDefinition = "decimal(10,2)")
     private BigDecimal amount;
     
+    @Column(nullable = false, columnDefinition = "varchar(10)")
+    private String currency;
+
     @Column(nullable = false, columnDefinition = "date")
-    private LocalDate date ;
+    private LocalDate date;
     
     @ManyToOne
     @JoinColumn(name = "account_id", referencedColumnName = "id")
